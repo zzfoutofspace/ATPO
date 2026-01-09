@@ -1,0 +1,25 @@
+tools:
+  # General tool configuration
+  call_limit: 3  # Maximum number of tool calls allowed per sample
+  max_workers: 64  # Maximum number of threads for concurrent tool execution
+  timeout: 120  # Tool execution timeout (seconds)
+  retry_count: 3  # Number of retry attempts for tool execution failures
+  verbose_logging: true  # Enable detailed logging
+  fail_on_error: false  # Throw an exception if tool loading fails
+  
+  # Tool instance definitions
+  tool_instances:
+    python:  
+      class_path: verl.workers.rollout.tools.python_tool.PythonTool  # Tool class path
+      params:  # Tool-specific parameters
+        conda_path: /path/to/conda
+        conda_env: verl
+    
+    search:
+      class_path: verl.workers.rollout.tools.search_tool.BingSearchTool
+      params:
+        api_key: <your_API_key>
+        zone: <your_zone>
+        max_results: 10
+        result_length: 1000
+        location: cn

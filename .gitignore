@@ -1,0 +1,11 @@
+LLaMA-Factory/arpo_train_sft/dataset/*.jsonl
+LLaMA-Factory/arpo_train_sft/dataset/*.jsonl
+LLaMA-Factory/LLaMA-Factory-backup
+AEPO/scripts/*.log
+ARPO/rl_datasets/hotpotqa
+ARPO/rl_datasets/multihop
+ARPO/rl_datasets/nq
+ARPO/rl_datasets/singlehop
+ARPO/search_cache/search_cache.json
+ARPO/search_cache/search_cache.json.lock
+ARPO/search_cache/search_cache.tmp

@@ -1,0 +1,27 @@
+agent:
+  activate_agent: true
+  name: "tool_agent"  # 指定使用 ToolAgent
+
+  # ToolAgent 的专属配置
+  tools:
+    call_limit: 5      # 每轮最多调用5次工具
+    max_workers: 64
+    timeout: 120
+    retry_count: 3
+
+    # 工具实例定义
+    tool_instances:
+      python:  
+        class_path: verl.workers.agent.tools.python_tool.PythonTool  # 工具类路径
+        params:  # 工具特定参数
+          conda_path: /path/to/conda
+          conda_env: verl
+      
+      search:
+        class_path: verl.workers.agent.tools.search_tool.BingSearchTool
+        params:
+          api_key: [your_api_key]
+          zone: [your_zone]
+          max_results: 10
+          result_length: 1000
+          location: cn
