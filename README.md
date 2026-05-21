@@ -117,7 +117,12 @@ bash ATPO/scripts/ATPO_qwen3_4B.sh
 
 ## Evaluation results
 
-
+<p align="center">
+  <img alt="intro" src="./assets/combined_entropy_accuracy_figure.jpg" />
+  <i>
+   Left: The entropy comparison of different methods during training on multihop benchmark. Right: Performance comparison between all methods on HotpotQA dataset. Both are based on Qwen3-4B..
+  </i>
+</p>
 
 |        | **Hotpot** | **2wiki** | **Musiq** | **Bamb** | **Avg.** | **NQ** | **TriviaQA** | **PopQA** | **Avg.** |
 |--------|-------------|---------|--------|------|------|-----|-----------|-------|------|
@@ -144,7 +149,7 @@ bash ATPO/scripts/ATPO_qwen3_4B.sh
 | + AEPO | 47.05 | 47.53 | 21.03 | 44.00 | 44.51 | 49.00 | 64.13 | 50.21 | 55.45 |
 | + **AT²PO (Ours)** | **49.58** | **48.04** | **22.56** | **51.20** | **45.83** | **52.91** | 64.90 | **50.44** | **56.34** |
 
-**Table Caption:** Experiment results on three backbone models across seven datasets. The **bolded** values indicate the best result in comparisons.
+**Table 1:** Experiment results on three backbone models across seven datasets. The **bolded** values indicate the best result in comparisons.
 
 
 ## Acknowledgement
